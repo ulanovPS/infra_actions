@@ -68,7 +68,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull docker/login-action@v1
+          sudo docker pull psulanov/16theory
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 docker/login-action@v1
+          sudo docker run --rm -d -p 5000:5000 psulanov/16theory
